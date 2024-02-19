@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    background-color: sandybrown;
+    text-align: center;
+    min-height: 100%;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover{
+    background-color: teal;
+    color: white;
+    border-radius: 10px;
+}
+
+.menu li{
+    list-style: none;
+}
+
+table{
+    margin:0 auto;
+    width:300px;
+    border: 1px solid black;
+}
+
+table td{
+    border: 1px solid black;
+}
+
+h1{
+    margin: 12px;
+    font-family: 'Zeyada';
+}
+
+h3{
+    margin: 12px;
+}
+
+img{
+    width: 180px;
+}
