@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Livros</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Livros</h1>
+    </header>
+    <main>
+        <form method="post">
+                <div class="group">
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" placeholder="Insira o título" id="titulo" required>
+                    <label for="codigo">Código</label>
+                    <input type="number" name="codigo" placeholder="Insira o código" id="codigo">
+                </div>
+                <div class="group">
+                    <label for="editora">Editora</label>
+                    <select name="editora" id="editora">
+                        <option value="1">Editora X</option>
+                        <option value="2">Editora Y</option>
+                        <option value="3">Editora Z</option>
+                    </select>
+                </div>
+                <div class="group">
+                    <fieldset>
+                        <legend>Gênero do livro:</legend>
+                        <input type="checkbox" name="drama" value="drama" id="drama">
+                        <label for="drama">Drama</label>
+                        <input type="checkbox" name="humor" value="humor" id="humor">
+                        <label for="humor">Humor</label>
+                    </fieldset>
+                </div>
+                <div class="group">
+                    <fieldset>
+                        <legend>O livro está disponível?</legend>
+                        <input type="radio" name="disponivel" value="sim" id="sim">
+                        <label for="sim">Sim</label>
+                        <input type="radio" name="disponivel" value="nao" id="nao">
+                        <label for="nao">Não</label>
+                    </fieldset>
+                </div>
+        </form>
+    </main>
+    <footer>
+        <h3>2024</h3>
+    </footer>
+</body>
+</html>
