@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#container{
+    background-color:#00d1cd;
+    height:100vh;
+    display: grid;
+    place-items: center;
+}
+
+.formulario{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.group{
+    display:flex;
+    justify-content: space-around;
+}
+p{
+    font-size: 2em;
+    text-align: center;
+}
+
+li{
+    font-size: 2em;
+    text-align: left;
+}
+
+input{
+    flex:2;
+    font-size: 2em;
+}
+
+button{
+    flex: 1;
+    font-size: 2em;
+}
+
+.item{
+    color: red;
+}

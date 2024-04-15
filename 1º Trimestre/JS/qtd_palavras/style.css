@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    min-height: 100vh;
+    background-color: crimson;
+    display: grid;
+    place-items: center;
+}
+
+.grupo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea{
+    margin: 10px;
+    width: 300px;
+}
+
+h3{
+    margin: 10px;
+    color: white;
+}
