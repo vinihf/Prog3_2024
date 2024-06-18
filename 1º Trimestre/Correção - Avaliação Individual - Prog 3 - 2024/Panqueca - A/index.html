@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Pedido de Panquecas - A</title>
+</head>
+<body>
+    <form>
+        <h1>Preço do Pedido</h1>
+        <label >Tamanho da panqueca:</label>
+        <div class=grupo>
+            <input type="radio" name="tamanho" value="p">P
+            <input type="radio" name="tamanho" value="m">M
+            <input type="radio" name="tamanho" value="g">G
+        </div>
+        <label>Sabor da panqueca:</label>
+        <div class=grupo>
+            <input type="checkbox" name="queijo" class="queijo">Queijo
+            <input type="checkbox" name="calabresa" class="calabresa">Calabresa
+            <input type="checkbox" name="morango" class="morango">Morango
+        </div>
+        <label>Entrega ou busca?</label>
+        <select name="retirada">
+            <option value="entrega">Entrega</option>
+            <option value="busca">Busca</option>
+        </select>
+        <div class="grupo">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" placeholder="0">
+        </div>
+        <div class="grupo">
+            <button type="submit">Calcular</button>
+            <h3>Preço:</h3>
+        </div>
+    </form>
+</body>
+</html>

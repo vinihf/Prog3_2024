@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Pedido de Panquecas - A</title>
+</head>
+<body>
+    <form>
+        <h1>Preço do Pedido</h1>
+        <label for="tamanho">Tamanho da panqueca:</label>
+        <select id="tamanho">
+            <option disabled selected>Selecione</option>
+            <option value="p">P</option>
+            <option value="m">M</option>
+            <option value="g">G</option>
+        </select>
+        <label>Sabor da panqueca:</label>
+        <div class=grupo>
+            <input type="checkbox" name="queijo" class="queijo">Queijo
+            <input type="checkbox" name="calabresa" class="calabresa">Calabresa
+            <input type="checkbox" name="morango" class="morango">Morango
+        </div>
+        <label>Entrega ou busca?</label>
+        <div class=grupo>
+            <input type="radio" name="retirada" value="entrega">Entrega
+            <input type="radio" name="retirada" value="busca">Busca
+        </div>
+        
+        <div class="grupo">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" placeholder="0">
+        </div>
+        <div class="grupo">
+            <button type="submit">Calcular</button>
+            <h3>Preço:</h3>
+        </div>
+    </form>
+</body>
+</html>

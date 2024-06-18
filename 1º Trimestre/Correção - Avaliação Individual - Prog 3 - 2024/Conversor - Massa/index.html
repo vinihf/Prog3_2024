@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"></link>
+    <script src="script.js" defer></script>
+    <title>Conversor de Moeda</title>
+</head>
+<body>
+    <div class = "container">
+        <header>
+            <h1> Conversor de Massa </h1>
+        </header>
+        <div class="container-form">
+            <div class='formulario'>
+                <label for="quantia">Quantia:</label>
+                <input type="number" step="0.01" id="quantia" placeholder="0.00">
+                <label for="origem">Converter de:</label>
+                <select id="origem">
+                    <option disabled selected>Selecione a unidade</option>
+                    <option value="g">Gramas</option>
+                    <option value="q">Quilogramas</option>
+                    <option value="t">Toneladas</option>
+                </select>
+                <label for="destino">Converter para:</label>
+                <select id="destino">
+                    <option disabled selected>Selecione a unidade</option>
+                    <option value="g">Gramas</option>
+                    <option value="q">Quilogramas</option>
+                    <option value="t">Toneladas</option>
+                </select>
+                <button type="submit">Converter</button>
+                <label for="valor">Valor:</label>
+                <input type="number" disabled step="0.01" id="valor" placeholder="0.00">
+            </div>
+        </div>
+        <footer>
+            <input type="radio" name="cor" value="green" checked> Verde
+            <input type="radio" name="cor" value="blue"> Azul
+            <input type="radio" name="cor" value="gray"> Cinza
+        </footer>
+    </div>
+</body>
+</html>
