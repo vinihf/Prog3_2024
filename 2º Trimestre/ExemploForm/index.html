@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Exemplo de Formulário</title>
+</head>
+<body>
+    <form action="processa.php" method="post" id="container">
+        <label for="v1">Valor 1:</label>
+        <input type="number" name="v1" id="v1" required>
+        <select name="operacao" required>
+            <option value="ad">Adição</option>
+            <option value="sub">Subtração</option>
+            <option value="div">Divisão</option>
+            <option value="mul">Multiplicação</option>
+        </select>
+        <label for="v2">Valor 2:</label>
+        <input type="number" name="v2" id="v2" required>
+        <button type="submit" name="botao"> Calcular</button>
+    </form>
+</body>
+</html>
