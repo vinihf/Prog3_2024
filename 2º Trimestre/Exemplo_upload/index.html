@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Exemplo de Formulário</title>
+</head>
+<body>
+    <!-- A submissão de arquivos via formulário precisa do atributo enctype e do method POST -->
+    <form action="processa.php" method="post" id="container" enctype="multipart/form-data">
+        <label for="v1">Selecione o arquivo:</label>
+        <!-- 
+            Caso você queira que o formulário aceite mais de um arquivo, é possível adicionar a propriedade multiple.
+            O atributo accept faz com que ao selecionar os arquivos sejam exibidos somente os daquele tipo ou extensão:
+            - .pdf
+            - image/*
+
+            Um boa referência sobre o uso de inputs do tipo file é: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#additional_attributes
+
+        -->
+        <input type="file" name="arquivo" id="v1" required  accept=".pdf">
+        <button type="submit" name="botao"> Upload</button>
+    </form>
+</body>
+</html>
