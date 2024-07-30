@@ -8,7 +8,7 @@
 
         $resultado = $db->query($query);
 
-        $livro = $resultado->fetch_all(MYSQLI_ASSOC);
+        $livro = $resultado->fetch_array();
     }
 ?>
 <!DOCTYPE html>
@@ -22,21 +22,21 @@
     <form method='post' action='editLivro.php'>
         <label for=titulo>Título</label>
         <?php
-            echo "<input type=text id=titulo required name=titulo value='{$livro[0]['titulo']}'>";
+            echo "<input type=text id=titulo required name=titulo value='{$livro['titulo']}'>";
         ?>
         <br>
         <label for=ano>Ano</label>
         <?php
-            echo "<input type=number id=ano required name=ano value={$livro[0]['ano']}>";
+            echo "<input type=number id=ano required name=ano value={$livro['ano']}>";
         ?>
         <br>
         <label for=autor>Autor(a)</label>
         <?php
-            echo "<input type=text id=autor required name=autor value={$livro[0]['autor']}>";
+            echo "<input type=text id=autor required name=autor value={$livro['autor']}>";
         ?>        
         <br>
         <?php
-            echo "<input type=hidden id=idlivro required name=idlivro value={$livro[0]['idLivro']}>";
+            echo "<input type=hidden id=idlivro required name=idlivro value={$livro['idLivro']}>";
         ?> 
         <input type=submit name=botao value='Editar'>
     </form>
