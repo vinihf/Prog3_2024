@@ -6,7 +6,7 @@
     <title>Recuperação</title>
 </head>
 <body>
-    <form action='index.php' method='post'>
+    <form action='processa.php' method='post'>
         <div class='group'>
             <label for='consumo'>Valor do Consumo*:</label>
             <input type=number id='consumo' name='consumo' required>
@@ -25,20 +25,5 @@
         </div>
         <input type='submit' name='botao' value='Calcular'>
     </form>
-    <?php
-        if(isset($_POST['consumo'])){
-            $consumo = $_POST['consumo'];
-            if(isset($_POST['taxa'])){
-                $consumo+=0.1*$consumo;
-            }
-            if(isset($_POST['couvert'])){
-                $consumo+=10*$_POST['qtd'];
-            }
-            $valorDividido = ($consumo+$_POST['gorjeta'])/$_POST['qtd'];
-            echo "Valor para cada uma das {$_POST['qtd']} pessoas: R$ {$valorDividido}";
-        }else{
-            echo "Valor para cada uma das pessoas";
-        }
-    ?>
 </body>
 </html>
