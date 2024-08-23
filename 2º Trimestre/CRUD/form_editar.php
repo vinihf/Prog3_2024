@@ -9,6 +9,8 @@
         $resultado = $db->query($query);
 
         $livro = $resultado->fetch_array();
+
+
     }
 ?>
 <!DOCTYPE html>
@@ -36,7 +38,7 @@
         ?>        
         <br>
         <?php
-            echo "<input type=hidden id=idlivro required name=idlivro value={$livro['idLivro']}>";
+            echo "<input type=hidden id=idlivro name=idlivro value={$livro['idLivro']}>";
         ?> 
         <input type=submit name=botao value='Editar'>
     </form>
