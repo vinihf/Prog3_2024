@@ -1,16 +1,25 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+    header("location: index.php");
+}
     if(isset($_GET)){
         //Conexão com o banco de dados
         $db = new mysqli("localhost", "root", "", "colecao_livros");
 
-        //Query de consulta
-        $query = "select * from livros where idLivro = {$_GET['idlivro']}";
+        $stmt = $db->prepare("select * from livros where idLivro = ?");
+        
+        $idLivro = filter_var($_GET['idlivro'],FILTER_SANITIZE_NUMBER_INT);
 
-        $resultado = $db->query($query);
+        $stmt->bind_param("i",$idLivro);
 
-        $livro = $resultado->fetch_array();
+        $stmt->execute();
 
+        $resultado = $stmt->get_result();
 
+        $livro = $resultado->fetch_assoc();
+
+        $_SESSION["idLivro"] = $livro['idLivro'];
     }
 ?>
 <!DOCTYPE html>
@@ -18,7 +27,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar livro</title>
+    <title>Editar livro</title>
 </head>
 <body>
     <form method='post' action='editLivro.php'>
@@ -37,9 +46,6 @@
             echo "<input type=text id=autor required name=autor value={$livro['autor']}>";
         ?>        
         <br>
-        <?php
-            echo "<input type=hidden id=idlivro name=idlivro value={$livro['idLivro']}>";
-        ?> 
         <input type=submit name=botao value='Editar'>
     </form>
 </body>

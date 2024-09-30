@@ -1,14 +1,21 @@
 <?php
+session_start();
+if(!isset($_SESSION['id'])){
+    header("location: index.php");
+}
+
     if(isset($_GET)){
         //Conexão com o banco de dados
         $db = new mysqli("localhost", "root", "", "colecao_livros");
-    
-        //Query de consulta
-        $query = "delete from livros where idLivro = {$_GET['idlivro']}";
+        
+        $id_livro = filter_var($_GET['idlivro'],FILTER_SANITIZE_NUMBER_INT);
+        
+        $stmt = $db->prepare("delete from livros where idLivro = ?");
+        
+        $stmt->bind_param("i",$id_livro);
+        
+        $stmt->execute();
 
-        //Executa a consulta e armazena o resultado
-        $resultado = $db->query($query);
-
-        header("location:index.php");
+        header("location:restrita_lista.php");
     }
 ?>
