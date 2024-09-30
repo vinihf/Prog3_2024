@@ -20,15 +20,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Pessoa</title>
+    <link rel="stylesheet" type="text/css" href="./res/style.css" />
 </head>
 <body>
-    <form method='post' action='form_adicionar_pessoa.php'>
-        <label>E-mail:</label>
-        <input type='text' name='email' require>
-        <label>Senha:</label>
-        <input type='password' name='senha' require>
-        <input type='submit' name='botao' value='Adicionar'>
-        <a href='index.php'>Voltar</a>
-    </form>
+    <div class='container'>
+        <h1>Adicionar pessoa</h1>
+        <form method='post' action='form_adicionar_pessoa.php'>
+            <label>E-mail:</label>
+            <input type='text' name='email' require>
+            <label>Senha:</label>
+            <input type='password' name='senha' require>
+            <input type='submit' name='botao' value='Adicionar'>
+            <a href='index.php'>Voltar</a>
+        </form>
+    </div>
 </body>
 </html>
