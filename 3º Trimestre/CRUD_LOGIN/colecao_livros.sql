@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30/09/2024 às 21:00
+-- Tempo de geração: 01/10/2024 às 16:16
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -37,13 +37,6 @@ CREATE TABLE `livros` (
   `id_pessoa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `livros`
---
-
-INSERT INTO `livros` (`idLivro`, `titulo`, `ano`, `autor`, `id_pessoa`) VALUES
-(10, 'O Senhor dos Anéis', 1945, 'J.R.R. Tolkien', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -55,14 +48,6 @@ CREATE TABLE `pessoas` (
   `email` varchar(300) NOT NULL,
   `senha` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `pessoas`
---
-
-INSERT INTO `pessoas` (`id_pessoa`, `email`, `senha`) VALUES
-(1, 'vinicius.ferreira@feliz.ifrs.edu.br', '$2y$10$0ymItKIYKcW0W4mbd6132e2PSb9srDB2kkPv6w61hGc9emcgMT226'),
-(2, 'vanessa@gmail.com', '$2y$10$eugD0vHP6xKdc5WZeHKQm.QIx.dGSqkPn3MGeTmtlT3FfGi898pA2');
 
 --
 -- Índices para tabelas despejadas
@@ -89,13 +74,13 @@ ALTER TABLE `pessoas`
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `idLivro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idLivro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `pessoas`
 --
 ALTER TABLE `pessoas`
-  MODIFY `id_pessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pessoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restrições para tabelas despejadas

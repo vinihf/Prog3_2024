@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", system-ui;
+}
+
+body,html{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 450px;
+    padding: 25px;
+    height: 340px;
+}
+
+h1{
+    margin: 10px;
+}
+
+input[type='text'],input[type = 'email'],input[type='password'], input[type='number']{
+    padding: 5px;
+    margin: 5px;
+}
+
+input[type='submit']{
+    padding: 5px;
+    width: 120px;
+    background-color: white;
+}
+
+.grupo_botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th,tr,td{
+   border: 1px solid black;
+   padding: 10px; 
+}
