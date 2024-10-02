@@ -17,7 +17,8 @@ if(!isset($_SESSION['id'])){
     //Executa a consulta e armazena o resultado
     $resultado = $stmt->get_result();
 ?>
-<!DOCTYPE html>
+<!DOCTYPE ht
+ml>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
