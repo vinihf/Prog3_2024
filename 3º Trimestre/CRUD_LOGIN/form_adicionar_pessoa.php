@@ -42,9 +42,9 @@
             <h1>Adicionar pessoa</h1>
             <form method='post' action='form_adicionar_pessoa.php'>
                 <label>E-mail:</label>
-                <input type='text' name='email' require>
+                <input type='text' name='email' required>
                 <label>Senha:</label>
-                <input type='password' name='senha' require>
+                <input type='password' name='senha' required>
                 <div class='grupo_botao'>
                     <input type='submit' name='botao' value='Adicionar'>
                 </div>

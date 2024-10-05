@@ -12,9 +12,9 @@
             <h1>Coleção de Livros</h1>
             <form action='login.php' method='post'>
                 <label>E-mail:</label>
-                <input type='text' name='email' require>
+                <input type='text' name='email' required>
                 <label>Senha:</label>
-                <input type='password' name='senha' require>
+                <input type='password' name='senha' required>
                 <div class='grupo_botao'>
                     <input type='submit' name='botao' value='Acessar'>
                 </div>

@@ -4,6 +4,10 @@ if(!isset($_POST['botao'])){
     header("location: index.php");
 }
 
+if(!isset($_POST['email']) || !isset($_POST['senha'])){
+    header("location: index.php");
+}
+
 $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
 $senha = htmlspecialchars($_POST['senha']);
 
