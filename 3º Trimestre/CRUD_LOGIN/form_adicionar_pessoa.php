@@ -2,6 +2,10 @@
     //Verifica se o botão foi clicado
     if(isset($_POST['botao'])){
         
+        if(!isset($_POST['email']) || !isset($_POST['senha'])){
+            header("location: index.php");
+        }
+
         //Sanitiza as variáveis recebidas
         $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
         $senha = htmlspecialchars($_POST['senha']);

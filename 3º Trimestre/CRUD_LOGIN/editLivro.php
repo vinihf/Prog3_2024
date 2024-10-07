@@ -7,7 +7,11 @@ if(!isset($_SESSION['id'])){
     if(isset($_POST)){
         //Conexão com o banco de dados
         $db = new mysqli("localhost", "root", "", "colecao_livros");
-    
+        
+        if(!isset($_POST['titulo']) || !isset($_POST['autor']) || !isset($_POST['ano'])){
+            header("location: index.php");
+        }
+
         $titulo = htmlspecialchars($_POST['titulo']);
         $autor = htmlspecialchars($_POST['autor']);
         $ano = filter_var($_POST['ano'],FILTER_SANITIZE_NUMBER_INT);
