@@ -14,7 +14,7 @@
                 <label>E-mail:</label>
                 <input type='email' name='email' required>
                 <label>Senha:</label>
-                <input type='password' name='senha' required title="Oi">
+                <input type='password' name='senha' required>
                 <div class='grupo_botao'>
                     <input type='submit' name='botao' value='Acessar'>
                 </div>
