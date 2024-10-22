@@ -2,6 +2,10 @@
     //Verifica se o botão foi clicado
     if(isset($_POST['botao'])){
         
+        if(!isset($_POST['email']) || !isset($_POST['senha'])){
+            header("location: index.php");
+        }
+
         //Sanitiza as variáveis recebidas
         $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
         $senha = htmlspecialchars($_POST['senha']);
@@ -42,9 +46,9 @@
             <h1>Adicionar pessoa</h1>
             <form method='post' action='form_adicionar_pessoa.php'>
                 <label>E-mail:</label>
-                <input type='text' name='email' require>
+                <input type='email' name='email' required>
                 <label>Senha:</label>
-                <input type='password' name='senha' require>
+                <input type='password' name='senha' required>
                 <div class='grupo_botao'>
                     <input type='submit' name='botao' value='Adicionar'>
                 </div>

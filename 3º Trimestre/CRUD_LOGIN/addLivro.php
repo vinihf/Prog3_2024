@@ -5,6 +5,11 @@ if(!isset($_SESSION['id'])){
 }
 
     if(isset($_POST)){
+
+        if(!isset($_POST['titulo']) || !isset($_POST['autor']) || !isset($_POST['ano'])){
+            header("location: index.php");
+        }
+
         //Conexão com o banco de dados
         $db = new mysqli("localhost", "root", "", "colecao_livros");
         
