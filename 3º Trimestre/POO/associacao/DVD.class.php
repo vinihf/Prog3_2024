@@ -7,7 +7,7 @@ class DVD{
         $this->titulo = $titulo;
     }
 
-    public function getTitulo(){
+    public function getTitulo():string{
         return $this->titulo;
     }
 

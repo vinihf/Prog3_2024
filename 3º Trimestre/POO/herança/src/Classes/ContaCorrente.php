@@ -6,7 +6,7 @@ require_once "ContaBancaria.php";
 
 class ContaCorrente extends ContaBancaria{
 
-    public function __construct(private float $limite,protected float $saldo){
+    public function __construct(private float $limite,float $saldo){
         parent::__construct($saldo);
         $this->limite = $limite;
     }

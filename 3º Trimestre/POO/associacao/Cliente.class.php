@@ -14,7 +14,7 @@ class Cliente{
         $this->locados[] = $dvd;
     }
 
-    public function getLocados(){
+    public function getLocados():void{
         foreach($this->locados as $locado){
             echo $locado->getTitulo();
             echo "<br>";
