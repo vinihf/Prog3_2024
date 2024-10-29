@@ -1,5 +1,5 @@
 <?php
-include "Cachorro.class.php";
+require_once "Cachorro.class.php";
 
 $cachorro1 = new Cachorro("Totó");
 
