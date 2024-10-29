@@ -1,0 +1,15 @@
+{
+    "name": "vinih/heranca_composer",
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "src/Classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vinicius Hartmann Ferreira",
+            "email": "vinihf@gmail.com"
+        }
+    ],
+    "require": {}
+}

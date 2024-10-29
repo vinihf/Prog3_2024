@@ -1,0 +1,14 @@
+{
+    "name": "vinicius/exemplo_banco",
+    "authors": [
+        {
+            "name": "vhf"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "":"src/"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "vinicius/composer_simples",
+    "authors": [
+        {
+            "name": "vhf"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+             "": "src/"
+         }
+      },
+    "require": {}
+}
