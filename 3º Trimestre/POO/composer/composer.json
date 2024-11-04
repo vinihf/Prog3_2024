@@ -1,0 +1,15 @@
+{
+    "name": "usuario/composer",
+    "authors": [
+        {
+            "name": "Vinicius Hartmann Ferreira",
+            "email": "vinihf@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+             "Classes\\": "src/Classes"
+         }
+      }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "usuario/exercicio_festas",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vinicius Hartmann Ferreira",
+            "email": "vinihf@gmail.com"
+        }
+    ],
+    "require": {}
+}
